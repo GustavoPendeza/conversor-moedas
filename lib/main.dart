@@ -1,10 +1,12 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 
-const request = "https://api.hgbrasil.com/finance?key=SUA_CHAVE";
+var request = "https://api.hgbrasil.com/finance?key=${dotenv.env['SUA_CHAVE']}";
 
-void main() {
+Future main() async {
+  await dotenv.load(fileName: ".env");
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     home: const Home(),

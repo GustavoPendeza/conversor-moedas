@@ -22,9 +22,9 @@ Escolha um campo (Real, Dólar ou Euro), escreva o valor desejado e os outros ca
 
 ## Utilização
 
-Coloque sua chave da API do HG Brasil na linha 5 no main.dart:
+Crie um arquivo .env e adicione sua chave da API do HG Brasil
 
 ```bash
-# Troque o SUA_CHAVE pela sua chave da API
-const request = "https://api.hgbrasil.com/finance?key=SUA_CHAVE";
+# Adicione isso ao .env e troque o sua_chave_aqui para a chave da API
+SUA_CHAVE=sua_chave_aqui
 ```
